@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h1>View all our wonderful flats</h1>
+  <div class="my-grid">
+    <% @flats.each do |flat| %>
+      <div class="card" style="width: 18rem;">
+        <%= image_tag flat["imageUrl"], alt: "image of a flat", class: "card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= flat["name"] %></h5>
+          <p class="card-text">EUR <%= flat["price"]  %></p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
